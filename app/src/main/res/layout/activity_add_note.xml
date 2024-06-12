@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNoteActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            style="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:backgroundTint="#000"
+                android:contentDescription="back"
+                android:src="@drawable/ic_back" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/menu_btn"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:backgroundTint="#000"
+                android:contentDescription="menu"
+                android:src="@drawable/ic_menu_dots_vertical" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/style_btn"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:backgroundTint="#000"
+                android:contentDescription="style"
+                android:src="@drawable/ic_font_style" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/share_btn"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:backgroundTint="#000"
+                android:contentDescription="share"
+                android:src="@drawable/ic_share_square" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_edittext"
+                android:backgroundTint="#30A39F9F"
+                android:hint="Title"
+                android:padding="10dp"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/custom_edittext"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/editTextDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:gravity="top|start"
+                        android:hint="Start typing"
+                        android:inputType="textMultiLine"
+                        android:minLines="10"
+                        android:scrollbars="vertical" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:backgroundTint="@color/purple_200"
+                android:drawableLeft="@drawable/ic_save"
+                android:text="Save"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:textSize="28dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

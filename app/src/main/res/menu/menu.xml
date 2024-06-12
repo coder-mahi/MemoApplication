@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_menu"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+    </group>
+
+        <item android:title="Style">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/textsize_menu"
+                    android:icon="@drawable/ic_text_size"
+                    android:title="Text Size" />
+                <item
+                    android:id="@+id/fontstyle_menu"
+                    android:icon="@drawable/ic_font_style"
+                    android:title="Font Style" />
+                </group>
+            </menu>
+        </item>
+
+    <item android:title="Sharing">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/share_menu"
+                android:icon="@drawable/ic_share_square"
+                android:title="Share" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Others">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/privacy_menu"
+                    android:icon="@drawable/ic_privacy"
+                    android:title="Privacy Policy" />
+            <item
+                android:id="@+id/follow_menu"
+                android:icon="@drawable/ic_follow"
+                android:title="Follow Us" />
+            <item
+                android:id="@+id/about_menu"
+                android:icon="@drawable/ic_about_us"
+                android:title="About"/>
+            </group>
+        </menu>
+    </item>
+</menu>
